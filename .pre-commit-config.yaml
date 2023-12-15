@@ -1,0 +1,53 @@
+# adapted from https://towardsdatascience.com/pre-commit-hooks-you-must-know-ff247f5feb7e
+# Apply to all files without commiting:
+#   pre-commit run --all-files
+# Update this file:
+#   pre-commit autoupdate
+repos:
+-   repo: https://github.com/pre-commit/pre-commit-hooks
+    rev: v4.5.0
+    hooks:
+    -   id: check-ast
+    -   id: check-case-conflict
+    -   id: check-docstring-first
+    -   id: check-executables-have-shebangs
+    -   id: check-json
+    -   id: check-yaml
+    -   id: debug-statements
+    -   id: detect-private-key
+    -   id: end-of-file-fixer
+    -   id: fix-byte-order-marker
+    -   id: trailing-whitespace
+    -   id: mixed-line-ending
+-   repo: https://github.com/nbQA-dev/nbQA
+    rev: 1.7.1
+    hooks:
+    -   id: nbqa-black
+    -   id: nbqa-pyupgrade
+        args: [--py36-plus]
+    -   id: nbqa-isort
+        args: [--profile=black]
+-   repo: https://github.com/PyCQA/isort
+    rev: 5.13.0
+    hooks:
+    -   id: isort
+        args: ["--profile", "black"]
+-   repo: https://github.com/psf/black
+    rev: 23.11.0
+    hooks:
+    -   id: black
+    -   id: black-jupyter
+-   repo: https://github.com/asottile/pyupgrade
+    rev: v3.15.0
+    hooks:
+    -   id: pyupgrade
+        args: [--py36-plus]
+-   repo: https://github.com/pycqa/pylint
+    rev: v3.0.1
+    hooks:
+    -   id: pylint
+#        args: ["--disable", "unexpected-keyword-arg,no-value-for-parameter,too-many-function-args"]
+- repo: https://github.com/kynan/nbstripout
+  rev: 0.6.1
+  hooks:
+    - id: nbstripout
