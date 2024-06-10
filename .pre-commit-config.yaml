@@ -38,12 +38,12 @@ repos:
     -   id: black
     -   id: black-jupyter
 -   repo: https://github.com/asottile/pyupgrade
-    rev: v3.15.2
+    rev: v3.16.0
     hooks:
     -   id: pyupgrade
         args: [--py36-plus]
 -   repo: https://github.com/pycqa/pylint
-    rev: v3.2.2
+    rev: v3.2.3
     hooks:
     -   id: pylint
 #        args: ["--disable", "unexpected-keyword-arg,no-value-for-parameter,too-many-function-args"]
