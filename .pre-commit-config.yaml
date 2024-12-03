@@ -20,7 +20,7 @@ repos:
     -   id: trailing-whitespace
     -   id: mixed-line-ending
 -   repo: https://github.com/nbQA-dev/nbQA
-    rev: 1.8.7
+    rev: 1.9.1
     hooks:
     -   id: nbqa-black
     -   id: nbqa-pyupgrade
@@ -38,16 +38,16 @@ repos:
     -   id: black
     -   id: black-jupyter
 -   repo: https://github.com/asottile/pyupgrade
-    rev: v3.18.0
+    rev: v3.19.0
     hooks:
     -   id: pyupgrade
         args: [--py36-plus]
 -   repo: https://github.com/pycqa/pylint
-    rev: v3.3.1
+    rev: v3.3.2
     hooks:
     -   id: pylint
 #        args: ["--disable", "unexpected-keyword-arg,no-value-for-parameter,too-many-function-args"]
 - repo: https://github.com/kynan/nbstripout
-  rev: 0.7.1
+  rev: 0.8.1
   hooks:
     - id: nbstripout
