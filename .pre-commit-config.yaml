@@ -28,12 +28,12 @@ repos:
     -   id: nbqa-isort
         args: [--profile=black]
 -   repo: https://github.com/PyCQA/isort
-    rev: 5.13.2
+    rev: 6.0.0
     hooks:
     -   id: isort
         args: ["--profile", "black"]
 -   repo: https://github.com/psf/black
-    rev: 24.10.0
+    rev: 25.1.0
     hooks:
     -   id: black
     -   id: black-jupyter
@@ -43,7 +43,7 @@ repos:
     -   id: pyupgrade
         args: [--py36-plus]
 -   repo: https://github.com/pycqa/pylint
-    rev: v3.3.3
+    rev: v3.3.4
     hooks:
     -   id: pylint
 #        args: ["--disable", "unexpected-keyword-arg,no-value-for-parameter,too-many-function-args"]
