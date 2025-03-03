@@ -10,41 +10,24 @@ repos:
     hooks:
     -   id: check-added-large-files
     -   id: check-case-conflict
-    -   id: check-docstring-first
     -   id: check-executables-have-shebangs
     -   id: check-json
     -   id: check-shebang-scripts-are-executable
     -   id: check-toml
     -   id: check-yaml
-    -   id: debug-statements
     -   id: detect-private-key
     -   id: end-of-file-fixer
     -   id: fix-byte-order-marker
 -   repo: https://github.com/astral-sh/ruff-pre-commit
     rev: v0.9.9
     hooks:
-    # Run the linter.
     - id: ruff
       args: [ --fix ]
-    # Run the formatter.
     - id: ruff-format
 -   repo: https://github.com/pre-commit/mirrors-mypy
     rev: v1.15.0
     hooks:
     -   id: mypy
--   repo: https://github.com/nbQA-dev/nbQA
-    rev: 1.9.1
-    hooks:
-    -   id: nbqa-black
-    -   id: nbqa-pyupgrade
-        args: [--py36-plus]
-    -   id: nbqa-isort
-        args: [--profile=black]
--   repo: https://github.com/pycqa/pylint
-    rev: v3.3.4
-    hooks:
-    -   id: pylint
-#        args: ["--disable", "unexpected-keyword-arg,no-value-for-parameter,too-many-function-args"]
 -   repo: https://github.com/kynan/nbstripout
     rev: 0.8.1
     hooks:
