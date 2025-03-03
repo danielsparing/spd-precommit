@@ -1,0 +1,8 @@
+[tool.ruff.lint]
+select = ["E", "F", "I", "UP", "PL", "D", "T20"]
+ignore = [
+    "D203",  # Conflicting docstring rule
+    "D213",  # Conflicting multi-line docstring rule
+    "T201",
+    "D400",  # D415 is more general
+]
