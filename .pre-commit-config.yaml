@@ -22,8 +22,17 @@ repos:
     rev: v0.9.9
     hooks:
     - id: ruff
+      types_or: [ python, pyi ]  # because ruff doesn't handle %%sql magic cells. We can use nbqa-ruff-* instead.
+
       args: [ --fix ]
     - id: ruff-format
+      types_or: [ python, pyi ]
+-   repo: https://github.com/nbQA-dev/nbQA
+    rev: 1.9.1
+    hooks:
+    - id: nbqa-ruff-check
+      args: [ '--ignore=D100,E402,I001,F821' ]  # F821 because of dbutils, spark
+    - id: nbqa-ruff-format
 -   repo: https://github.com/pre-commit/mirrors-mypy
     rev: v1.15.0
     hooks:
