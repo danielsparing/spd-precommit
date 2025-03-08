@@ -41,8 +41,3 @@ repos:
     rev: 0.8.1
     hooks:
     -   id: nbstripout
-        # don't force "null" execution-count,
-        # because Databricks (when wiping output)
-        # uses 0, so would always trigger
-        # nbstripout
-        args: [--keep-count]
