@@ -24,8 +24,8 @@ repos:
     rev: v0.11.6
     hooks:
       - id: ruff
-        types_or: [python, pyi] # because ruff doesn't handle %%sql magic cells. We can use nbqa-ruff-* instead.
-
+        # excluding ipynb's as suggested in https://docs.astral.sh/ruff/integrations/#pre-commit , because ruff doesn't handle %%sql magic cells. We can use nbqa-ruff-* instead.
+        types_or: [python, pyi]
         args: [--fix]
       - id: ruff-format
         types_or: [python, pyi]
