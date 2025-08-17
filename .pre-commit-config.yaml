@@ -23,7 +23,7 @@ repos:
   - repo: https://github.com/astral-sh/ruff-pre-commit
     rev: v0.12.2
     hooks:
-      - id: ruff
+      - id: ruff-check
         # excluding ipynb's as suggested in https://docs.astral.sh/ruff/integrations/#pre-commit , because ruff doesn't handle %%sql magic cells. We can use nbqa-ruff-* instead.
         types_or: [python, pyi]
         args: [--fix]
